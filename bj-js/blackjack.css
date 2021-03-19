@@ -1,0 +1,64 @@
+#deal-wrap, #play-wrap {
+  min-height: 120px;
+}
+#deal-data, #play-data {
+  padding: 10px;
+  color: rgb(63, 63, 63);
+}
+#deal-stand, #play-stand {
+  display: none;
+  padding: 5px;
+  background: #000000;
+  color: rgb(5, 21, 255);
+}
+#deal-stand.stood, #play-stand.stood { display: inline-block; }
+
+/* CARDS */
+#deal-cards, #play-cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 20px;
+  padding: 20px;
+}
+.bj-card {
+  box-sizing: border-box;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eaeaea;
+}
+
+/* DEALER'S CARDS */
+#deal-wrap { background: #fc8a20; }
+#deal-data { background: #ff3419; }
+#deal-first .front { display: none; }
+#deal-first.show .back { display: none; }
+#deal-first.show .front { display: block; }
+
+/* PLAYER'S CARDS */
+#play-wrap { background: #991bff; }
+#play-data { background: #0026ff; }
+
+/* PLAY CONTROLS */
+#play-control {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  padding: 20px;
+  background: rgb(255, 238, 6);
+}
+#play-control input {
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0;
+  padding: 20px 0;
+  background: #690bff;
+  color: #fff;
+  width: 100%;
+}
+#playc-hit, #playc-stand { display: none; }
+#play-control.started { grid-template-columns: 50% 50%; }
+#play-control.started #playc-start { display: none; }
+#play-control.started #playc-hit, #play-control.started #playc-stand { display: block; }
